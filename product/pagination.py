@@ -9,7 +9,7 @@ class CustomPagination(PageNumberPagination):
 		if not self.page.has_next():
 			return None
 		return self.page.next_page_number()
-		
+
 	def get_previous_link(self):
 		if not self.page.has_previous():
 			return None

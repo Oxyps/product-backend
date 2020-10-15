@@ -3,7 +3,7 @@ from rest_framework import serializers
 from .models import Product
 
 class ProductSerializer(serializers.ModelSerializer):
-	image = serializers.ImageField(
+	image_url = serializers.ImageField(
 		# null=False,
 		max_length=254,
 		use_url=True
