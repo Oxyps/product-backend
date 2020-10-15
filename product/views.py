@@ -9,7 +9,7 @@ from .serializers import ProductSerializer
 from .pagination import CustomPagination
 
 class ProductView(generics.ListCreateAPIView):
-	queryset = Product.objects.all()
+	queryset = Product.objects.get_queryset().order_by('id')
 	serializer_class = ProductSerializer
 	pagination_class = CustomPagination
 
