@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 	'rest_framework',
     'corsheaders',
 	
-	'product'
+	'product',
 ]
 
 CORS_ORIGIN_WHITELIST = [

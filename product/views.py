@@ -4,16 +4,30 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import Http404
 
-from .models import Product
-from .serializers import ProductSerializer
+from .models import Product, Batch
+from .serializers import ProductSerializer, BatchSerializer
 from .pagination import CustomPagination
 
+# GET | POST batches
+class BatchView(generics.ListCreateAPIView):
+	queryset = Batch.objects.all()
+	serializer_class = BatchSerializer
+	pagination_class = CustomPagination
+
+# GET/:id | PUT | PATCH batches
+class BatchDetailView(generics.RetrieveUpdateAPIView):
+	queryset = Batch.objects.all()
+	serializer_class = BatchSerializer
+	pagination_class = CustomPagination
+
+# GET | POST products
 class ProductView(generics.ListCreateAPIView):
 	queryset = Product.objects.all()
 	serializer_class = ProductSerializer
 	pagination_class = CustomPagination
 
-class ProductViewDetail(APIView):
+# GET/:id | PUT | DELETE products
+class ProductDetailView(APIView):
 	def get_object(self, product_id):
 		try:
 			return Product.objects.get(pk=product_id)
