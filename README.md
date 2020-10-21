@@ -40,6 +40,10 @@
 * Listagem e cadastro de produtos (GET e POST): `products/`;
 * Detalhe, edição e exclusão de produtos (GET, PUT, DELETE): `products/:product_id/`.
 
+**Lote**
+* Listagem e cadastro de lotes (GET e POST): `batches/`;
+* Detalhe, edição e exclusão de lotes (GET, PUT, DELETE): `products/:pk/`.
+
 ## Tecnologias utilizadas
 - [x] [Python](https://docs.python.org/3/)
 - [x] [Django Framework](https://docs.djangoproject.com/en/3.1/)
