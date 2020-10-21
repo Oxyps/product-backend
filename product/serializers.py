@@ -14,9 +14,11 @@ class BatchSerializer(serializers.ModelSerializer):
 		return Batch.objects.create(**validated_data)
 
 class ProductSerializer(serializers.ModelSerializer):
+	batch = BatchSerializer()
+
 	class Meta:
 		model = Product
-		fields = '__all__'
+		fields = ['id', 'nome', 'descricao', 'preco', 'batch']
 
 	def create(self, validated_data):
 		return Product.objects.create(**validated_data)

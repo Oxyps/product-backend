@@ -15,7 +15,8 @@ class BatchView(generics.ListCreateAPIView):
 	pagination_class = CustomPagination
 
 # GET/:id | PUT | PATCH batches
-class BatchDetailView(generics.RetrieveUpdateAPIView):
+class BatchDetailView(generics.RetrieveUpdateDestroyAPIView):
+# class BatchDetailView(generics.RetrieveUpdateAPIView):
 	queryset = Batch.objects.all()
 	serializer_class = BatchSerializer
 	pagination_class = CustomPagination

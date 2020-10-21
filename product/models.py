@@ -7,9 +7,9 @@ class Batch(models.Model):
 		db_table = 'batch'
 
 	def __str__(self):
-		return f'{self.batch}'
+		return f'{self.code}'
 
-	batch = models.CharField(unique=True, max_length=50)
+	code = models.CharField(null=False, blank=False, unique=True, max_length=50)
 	producer = models.CharField(null=False, blank=False, max_length=20)
 	produce_date = models.DateField(null=False, blank=False)
 	shelf_life = models.DateField(null=False, blank=False)
@@ -26,6 +26,6 @@ class Product(models.Model):
 	descricao = models.CharField(null=False, blank=False, max_length=254)
 	preco = models.DecimalField(null=False, blank=False, max_digits=15, decimal_places=2)
 	
-	batch = models.ForeignKey('Batch', db_column='batch', on_delete=models.PROTECT)
+	batch = models.ForeignKey('Batch', db_column='batch_id', on_delete=models.PROTECT)
 
 	# image_url = models.ImageField(null=False, blank=False, upload_to='products', max_length=254)
