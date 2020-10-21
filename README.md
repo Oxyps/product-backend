@@ -32,6 +32,7 @@
 		> py manage.py runserver
 	```
 1. Rodar o [frontend](https://github.com/Oxyps/product-frontend).
+1. Assegurar-se de inserir a porta da API no frontend `./src/services/api`.
 
 ## Rotas
 
