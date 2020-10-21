@@ -14,7 +14,7 @@ class BatchSerializer(serializers.ModelSerializer):
 		return Batch.objects.create(**validated_data)
 
 class ProductSerializer(serializers.ModelSerializer):
-	batch = BatchSerializer()
+	batch = serializers.SlugRelatedField(queryset=Batch.objects.all(), slug_field='code')
 
 	class Meta:
 		model = Product
