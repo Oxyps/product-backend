@@ -42,7 +42,7 @@
 
 **Lote**
 * Listagem e cadastro de lotes (GET e POST): `batches/`;
-* Detalhe, edição e exclusão de lotes (GET, PUT, DELETE): `products/:pk/`.
+* Detalhe, edição e exclusão de lotes (GET, PUT, DELETE): `batches/:pk/`.
 
 ## Tecnologias utilizadas
 - [x] [Python](https://docs.python.org/3/)
