@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 
 CORS_ORIGIN_WHITELIST = [
 	'http://127.0.0.1:3000',
-	'https://product-frontend-abel.herokuapp.com',
+	'https://product-frontend-oxyps.herokuapp.com',
 ]
 
 MIDDLEWARE = [
